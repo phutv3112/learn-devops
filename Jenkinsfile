@@ -25,13 +25,13 @@ pipeline {
 
         stage('Build Backend Image') {
             steps {
-                sh 'docker build -t "$DOCKER_HUB_USR/my-app-backend:latest" ./my-app/backend'
+                sh 'docker build -t "$DOCKER_HUB_USR/my-app-backend:latest" ./backend'
             }
         }
 
         stage('Build Frontend Image') {
             steps {
-                sh 'docker build -t "$DOCKER_HUB_USR/my-app-frontend:latest" ./my-app/frontend'
+                sh 'docker build -t "$DOCKER_HUB_USR/my-app-frontend:latest" ./frontend'
             }
         }
 
